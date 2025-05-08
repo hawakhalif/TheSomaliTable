@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@preline/preline@2.0.0/dist/preline.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: false,
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#7D0044',
+                        secondary: '#DB63A4',
+                        dark: '#1F2937',
+                        light: '#FFFFFF'
+                    },
+                    fontFamily: {
+                        sans: ['Alice', 'serif'],
+                        serif: ['Alice', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Alice', serif;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        
+        .hero {
+            background-color: #FFFFFF;
+        }
+        
+        .page-transition {
+            transition: opacity 0.3s ease;
+        }
+        
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-card {
+            transition: all 0.3s ease;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: #7D0044;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="home.html" class="text-gray-700 hover:text-primary transition py-2">Home</a>
+                    <a href="story.html" class="text-gray-700 hover:text-primary transition py-2">Our Story</a>    
+        
+                    
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-bars text-primary"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
+            <div class="flex flex-col space-y-2">
+                <a href="home.html" class="text-gray-700 hover:text-primary transition py-2">Home</a>
+                <a href="story.html" class="text-gray-700 hover:text-primary transition py-2">Our Story</a>
+            
+            </div>
+        </div>
+    </nav>
+
+    <!-- Menu Page Content -->
+    <div id="menu" class="min-h-screen">
+        <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-serif font-bold mb-4">Our Dessert Menu</h2>
+                <p class="text-lg max-w-3xl mx-auto">
+                    Discover our selection of artisan baked goods, each made with premium ingredients and a labor of love
+                </p>
+            </div>
+            <!-- Stuffed Cookies Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-bold mb-8 text-center">Stuffed Cookies</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Walnut Chocolate Chunk Cookie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="walnucook.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">1. Walnut Chocolate Chunk Cookie</h4>
+                            <p class="text-gray-600">
+                                Cookie with crunchy walnuts and chocolate chunks, with a gooey hazelnut chocolate center.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pistachio Chocolate Chip Cookie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="pist.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">2. Pistachio Chocolate Chip Cookie</h4>
+                            <p class="text-gray-600">
+                                Buttery cookie loaded with chocolate chips and luscious pistachio cream filling.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Biscoff White Chocolate Cookie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="whitechoc.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">3. Biscoff White Chocolate Cookie</h4>
+                            <p class="text-gray-600">
+                                Cookie with white chocolate chunks and warm spiced Biscoff cookie butter filling.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Death By Chocolate Cookie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="deat.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">4. Death By Chocolate Cookie</h4>
+                            <p class="text-gray-600">
+                                Fudgy cookie made with premium cocoa and loaded with melty chocolate chunks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                        
+            <!-- Brownies & Bars Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-bold mb-8 text-center">Brownies & Bars</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Strawberry Chocolate Blondie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="strawblondie.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">1. Strawberry Chocolate Blondie</h4>
+                            <p class="text-gray-600">
+                                Buttery vanilla blondie with roasted strawberry jam pockets and dark chocolate drizzle, finished with toasted almond crunch.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pistachio White Chocolate Blondie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="pistachioblondie.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">2. Pistachio White Chocolate Blondie</h4>
+                            <p class="text-gray-600">
+                                Pistachio-infused blondie with a pistachio butter center a white chocolate drizzle, topped with crushed toasted pistachios.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Apricot Chocolate Blondie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="apricotblond.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">3. Apricot Chocolate Blondie</h4>
+                            <p class="text-gray-600">
+                                Vanilla bean blondie with apricot jam pockets and a bittersweet chocolate drizzle, balanced with a hint of sea salt.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Frangipane Almond Blondie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="fangipne.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">4. Frangipane Almond Blondie</h4>
+                            <p class="text-gray-600">
+                                Almond blondie layered with almond frangipane filling, topped with sliced almonds and powdered sugar.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Lotus Biscoff Brownie -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="lotusbrown.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">5. Lotus Biscoff Brownie</h4>
+                            <p class="text-gray-600">
+                                Chewy chocolate brownie topped with a cookie butter spread and a Biscoff cookie.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mandazi & Muffins Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-bold mb-8 text-center">Mandazi & Muffins</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Classic Mandazi -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">1. Classic Mandazi</h4>
+                            <p class="text-gray-600">
+                                Light, golden East African beignets infused with aromatic cardamom spice mix, dusted with powdered sugar.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Chocolate Hazelnut Mandazi -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">2. Chocolate Hazelnut Mandazi</h4>
+                            <p class="text-gray-600">
+                                Pillowy mandazi stuffed with rich chocolate hazelnut spread, finished with chocolate glaze.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Pistachio Mandazi -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">3. Pistachio Mandazi</h4>
+                            <p class="text-gray-600">
+                                Delicate beignets filled with creamy pistachio butter, crowned with white chocolate drizzle.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Lotus Biscoff Mandazi -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">4. Lotus Biscoff Mandazi</h4>
+                            <p class="text-gray-600">
+                                Warm, spiced mandazi oozing with caramelized cookie butter, topped with chocolate glaze.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Blueberry Cardamom Muffins -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="blueberry.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">5. Blueberry Cardamom Muffins</h4>
+                            <p class="text-gray-600">
+                                Moist cardamom muffins with blueberries and lemon zest, topped with butter-sugar crust.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Double Chocolate Muffins -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="doubchoc.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">6. Double Chocolate Muffins</h4>
+                            <p class="text-gray-600">
+                                Rich muffins made with dutched cocoa and packed with chocolate chips.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Breads, Rolls & Loaves Section -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-serif font-bold mb-8 text-center">Breads, Rolls & Loaves</h3>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cardamom Rolls -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="cardamom.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">1. Cardamom Rolls</h4>
+                            <p class="text-gray-600">
+                                Brioche buns layered with cardamom brown sugar butter, baked golden with cardamom icing.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Artisan Sourdough -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="bread.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">2. Artisan Sourdough</h4>
+                            <p class="text-gray-600">
+                                Slow-fermented sourdough with crisp crust and tangy interior, optionally topped with sesame seeds.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Lemon Poppyseed Pound Cake -->
+                    <div class="menu-card bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="flex justify-center p-6">
+                            <div class="flex justify-center p-0 overflow-hidden">
+                                <img 
+                                  src="lemonpound.jpg" 
+                                  alt="Strawberry Chocolate Blondie"
+                                  class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+                                >
+                              </div>
+                        </div>
+                        <div class="px-6 pb-6">
+                            <h4 class="text-xl font-serif font-bold mb-2">3. Lemon Poppyseed Pound Cake</h4>
+                            <p class="text-gray-600">
+                                Buttery pound cake with lemon zest and poppy seeds, finished with tangy lemon glaze.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    </footer>
+
+    <!-- Mobile menu toggle script -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
