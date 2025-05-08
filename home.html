@@ -91,13 +91,21 @@
         <!-- Home Page -->
         <div id="home" class="page-transition min-h-screen">
           <!-- Replace your hero section with this: -->
-<section class="hero flex items-center justify-center text-center pt-12 pb-8">
+
+<!-- With this version that includes the image: -->
+<section class="hero flex flex-col items-center justify-center text-center pt-12 pb-0">
     <div class="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-6xl font-serif font-bold mb-2">The Somali Table</h1>
-        <p class="text-xl md:text-2xl text-primary">Based in New Haven, Connecticut</p>
+        <h1 class="text-4xl md:text-5xl font-serif font-bold mb-2">The Somali Table</h1>
+        <p class="text-xl md:text-2xl mb-8 text-primary">Based in New Haven, Connecticut</p>
+        
+        <!-- New Haven Image (16:9 aspect ratio) -->
+        <div class="w-full overflow-hidden rounded-lg shadow-md mt-4">
+            <img src="nhv.jpg" 
+                 alt="New Haven, Connecticut skyline"
+                 class="w-full aspect-video object-cover hover:scale-30 transition-transform duration-100">
+        </div>
     </div>
 </section>
-
 <!-- Welcome section (now with reduced top padding) -->
 <section class="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <div class="text-center">
