@@ -58,33 +58,31 @@
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="menu.html" class="text-gray-700 hover:text-primary transition py-2">Menu</a>
-                    <a href="story.html" class="text-gray-700 hover:text-primary transition py-2">Our Story</a>    
-        
-                    
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-button" class="p-2 rounded-md focus:outline-none">
-                        <i class="fas fa-bars text-primary"></i>
-                    </button>
-                </div>
-            </div>
+    <header class="bg-primary py-4 text-center shadow-md">
+        <div class="max-w-7xl mx-auto px-4">
+          <img src="thesomalitable.png" 
+               alt="The Somali Table Logo" 
+               class="h-20 md:h-24 mx-auto hover:scale-105 transition-transform duration-200">
         </div>
-        
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white pb-4 px-4">
-            <div class="flex flex-col space-y-2">
+      </header>
+  <!-- Centered Navigation -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-center h-16"> <!-- Changed from justify-between to justify-center -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="index.html" class="text-gray-700 hover:text-primary transition py-2">Home</a>
                 <a href="menu.html" class="text-gray-700 hover:text-primary transition py-2">Menu</a>
                 <a href="story.html" class="text-gray-700 hover:text-primary transition py-2">Our Story</a>
+            </div>
             
+            <!-- Mobile menu button (now centered with absolute positioning) -->
+            <div class="md:hidden flex items-center absolute right-4">
+                <button id="mobile-menu-button" class="p-2 rounded-md focus:outline-none">
+                    <i class="fas fa-bars text-primary"></i>
+                </button>
             </div>
         </div>
-    </nav>
+    </div>
 
     <!-- Page Content -->
     <div id="page-container">
